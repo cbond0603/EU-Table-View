@@ -28,6 +28,10 @@ class DetailTableViewController: UITableViewController {
         countryField.text = member
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        member = countryField.text
+        
+    }
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         let isPresentingInAddMode = presentingViewController is UINavigationController
         if isPresentingInAddMode {
